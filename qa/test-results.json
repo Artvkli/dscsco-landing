@@ -1,0 +1,215 @@
+{
+ "checks": [
+  {
+   "name": "[fa] all 33 in-page links have a target",
+   "pass": true,
+   "detail": "none broken"
+  },
+  {
+   "name": "[fa] every consultation button opens the form (6 buttons)",
+   "pass": true,
+   "detail": "6/6 reached the form"
+  },
+  {
+   "name": "[fa] menu link #services scrolls to its section",
+   "pass": true,
+   "detail": "section top at 76px"
+  },
+  {
+   "name": "[fa] menu link #benefits scrolls to its section",
+   "pass": true,
+   "detail": "section top at 76px"
+  },
+  {
+   "name": "[fa] menu link #international scrolls to its section",
+   "pass": true,
+   "detail": "section top at 76px"
+  },
+  {
+   "name": "[fa] menu link #process scrolls to its section",
+   "pass": true,
+   "detail": "section top at 76px"
+  },
+  {
+   "name": "[fa] menu link #why scrolls to its section",
+   "pass": true,
+   "detail": "section top at 76px"
+  },
+  {
+   "name": "[fa] external links point to dscsco.com",
+   "pass": true,
+   "detail": "https://dscsco.com/"
+  },
+  {
+   "name": "[en] all 33 in-page links have a target",
+   "pass": true,
+   "detail": "none broken"
+  },
+  {
+   "name": "[en] every consultation button opens the form (6 buttons)",
+   "pass": true,
+   "detail": "6/6 reached the form"
+  },
+  {
+   "name": "[en] menu link #services scrolls to its section",
+   "pass": true,
+   "detail": "section top at 76px"
+  },
+  {
+   "name": "[en] menu link #benefits scrolls to its section",
+   "pass": true,
+   "detail": "section top at 76px"
+  },
+  {
+   "name": "[en] menu link #international scrolls to its section",
+   "pass": true,
+   "detail": "section top at 76px"
+  },
+  {
+   "name": "[en] menu link #process scrolls to its section",
+   "pass": true,
+   "detail": "section top at 76px"
+  },
+  {
+   "name": "[en] menu link #why scrolls to its section",
+   "pass": true,
+   "detail": "section top at 76px"
+  },
+  {
+   "name": "[en] external links point to dscsco.com",
+   "pass": true,
+   "detail": "https://dscsco.com/"
+  },
+  {
+   "name": "[ar] all 33 in-page links have a target",
+   "pass": true,
+   "detail": "none broken"
+  },
+  {
+   "name": "[ar] every consultation button opens the form (6 buttons)",
+   "pass": true,
+   "detail": "6/6 reached the form"
+  },
+  {
+   "name": "[ar] menu link #services scrolls to its section",
+   "pass": true,
+   "detail": "section top at 76px"
+  },
+  {
+   "name": "[ar] menu link #benefits scrolls to its section",
+   "pass": true,
+   "detail": "section top at 76px"
+  },
+  {
+   "name": "[ar] menu link #international scrolls to its section",
+   "pass": true,
+   "detail": "section top at 76px"
+  },
+  {
+   "name": "[ar] menu link #process scrolls to its section",
+   "pass": true,
+   "detail": "section top at 76px"
+  },
+  {
+   "name": "[ar] menu link #why scrolls to its section",
+   "pass": true,
+   "detail": "section top at 76px"
+  },
+  {
+   "name": "[ar] external links point to dscsco.com",
+   "pass": true,
+   "detail": "https://dscsco.com/"
+  },
+  {
+   "name": "Root address opens Persian by default",
+   "pass": true,
+   "detail": "http://localhost:3123/fa"
+  },
+  {
+   "name": "Switch to EN: lang=en, dir=ltr, text and logo aligned to the correct side",
+   "pass": true,
+   "detail": "url http://localhost:3123/en"
+  },
+  {
+   "name": "Switch to AR: lang=ar, dir=rtl, text and logo aligned to the correct side",
+   "pass": true,
+   "detail": "url http://localhost:3123/ar"
+  },
+  {
+   "name": "Switch to FA: lang=fa, dir=rtl, text and logo aligned to the correct side",
+   "pass": true,
+   "detail": "url http://localhost:3123/fa"
+  },
+  {
+   "name": "Empty form is blocked with a clear message on each required field",
+   "pass": true,
+   "detail": "این فیلد الزامی است. | این فیلد الزامی است. | این فیلد الزامی است."
+  },
+  {
+   "name": "Invalid phone number is rejected",
+   "pass": true,
+   "detail": "شماره تماس معتبر نیست؛ آن را همراه با کد کشور وارد کنید."
+  },
+  {
+   "name": "Valid form is delivered to the company's lead endpoint",
+   "pass": true,
+   "detail": "{\"name\": \"علی رضایی\", \"company\": \"شرکت آزمون\", \"phone\": \"09123456789\", \"email\": \"ali@test-company.ir\", \"country\": \"ایران\", \"branches\": \"6-10\", \"locale\": \"fa\", \"receivedAt\": \"2026-11-02T08:22:22.677Z\"}"
+  },
+  {
+   "name": "Delivery is authenticated with the shared secret",
+   "pass": true,
+   "detail": "x-webhook-secret header received"
+  },
+  {
+   "name": "Success message is shown after delivery",
+   "pass": true,
+   "detail": "درخواست شما ثبت شد"
+  },
+  {
+   "name": "Minimal form (name, company, phone only) is delivered — English page",
+   "pass": true,
+   "detail": "locale=en, phone=+971501234567"
+  },
+  {
+   "name": "If the company endpoint is down, an error message is shown and the visitor's input is kept",
+   "pass": true,
+   "detail": "تعذّر إرسال الطلب. يرجى المحاولة مرة أخرى."
+  },
+  {
+   "name": "Retry succeeds once the endpoint is back",
+   "pass": true,
+   "detail": "lead recorded on retry"
+  },
+  {
+   "name": "[fa] phone 360px: no sideways scroll, all text ≥14px, body copy ≥16px, tap targets ≥24px",
+   "pass": true,
+   "detail": "overflow 0px, smallest text 14px, smallest body copy 16px, small targets 0"
+  },
+  {
+   "name": "[fa] phone menu opens, navigates and closes",
+   "pass": true,
+   "detail": "contact top 64px"
+  },
+  {
+   "name": "[en] phone 360px: no sideways scroll, all text ≥14px, body copy ≥16px, tap targets ≥24px",
+   "pass": true,
+   "detail": "overflow 0px, smallest text 14px, smallest body copy 16px, small targets 0"
+  },
+  {
+   "name": "[en] phone menu opens, navigates and closes",
+   "pass": true,
+   "detail": "contact top 64px"
+  },
+  {
+   "name": "[ar] phone 360px: no sideways scroll, all text ≥14px, body copy ≥16px, tap targets ≥24px",
+   "pass": true,
+   "detail": "overflow 0px, smallest text 14px, smallest body copy 16px, small targets 0"
+  },
+  {
+   "name": "[ar] phone menu opens, navigates and closes",
+   "pass": true,
+   "detail": "contact top 64px"
+  }
+ ],
+ "summary": "42/42 checks passed"
+}
