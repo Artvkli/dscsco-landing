@@ -1,10 +1,15 @@
-import LogoMark from "./Logo";
 import LanguageSwitcher from "./LanguageSwitcher";
 import MobileMenu from "./MobileMenu";
 import { ArrowIcon } from "./icons";
 import type { WithLocale } from "./types";
 
-const SECTIONS = ["services", "benefits", "international", "process", "why"] as const;
+const SECTIONS = [
+  "services",
+  "benefits",
+  "international",
+  "process",
+  "why",
+] as const;
 
 export default function SiteNav({ t, locale }: WithLocale) {
   const label: Record<(typeof SECTIONS)[number], string> = {
@@ -18,25 +23,21 @@ export default function SiteNav({ t, locale }: WithLocale) {
   return (
     <header className="nav">
       <div className="wrap nav-inner">
-        <a href="#top" className="brand" aria-label={`DSCSCO — ${t.brand}`}>
-          <LogoMark />
-          <span className="brand-text">
-            <span className="brand-word mono">DSCSCO</span>
-            <span className="brand-sub">{t.brand}</span>
-          </span>
-        </a>
+        <div className="brand">
+          <LanguageSwitcher t={t} locale={locale} />
+        </div>
 
         {/* Desktop links (>1100px) */}
         <nav className="navlinks" aria-label={t.navLabel}>
           {SECTIONS.map((id) => (
-            <a key={id} className="navlink" href={`#${id}`}>{label[id]}</a>
+            <a key={id} className="navlink" href={`#${id}`}>
+              {label[id]}
+            </a>
           ))}
         </nav>
 
         <div className="nav-actions">
-          <div className="nav-lang">
-            <LanguageSwitcher t={t} locale={locale} />
-          </div>
+          <div className="nav-lang"></div>
           <a className="btn btn-primary btn-sm nav-cta" href="#contact">
             <span className="cta-long">{t.cta}</span>
             <span className="cta-short">{t.ctaShort}</span>
@@ -64,7 +65,9 @@ export default function SiteNav({ t, locale }: WithLocale) {
             </nav>
             <div className="menu-foot">
               <LanguageSwitcher t={t} locale={locale} />
-              <a className="btn btn-primary menu-cta" href="#contact">{t.cta}</a>
+              <a className="btn btn-primary menu-cta" href="#contact">
+                {t.cta}
+              </a>
             </div>
           </MobileMenu>
         </div>
