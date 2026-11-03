@@ -64,7 +64,7 @@ export default function SiteNav({ t, locale }: WithLocale) {
               </ul>
             </nav>
             <div className="menu-foot">
-              <LanguageSwitcher t={t} locale={locale} />
+              {/* <LanguageSwitcher t={t} locale={locale} /> */}
               <a className="btn btn-primary menu-cta" href="#contact">
                 {t.cta}
               </a>

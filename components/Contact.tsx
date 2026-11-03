@@ -1,6 +1,5 @@
 import { localizeDigits } from "@/lib/i18n";
 import ContactForm from "./ContactForm";
-import { GlobeIcon } from "./icons";
 import type { WithLocale } from "./types";
 
 export default function Contact({ t, locale }: WithLocale) {
@@ -31,10 +30,6 @@ export default function Contact({ t, locale }: WithLocale) {
               ))}
             </ol>
           </div>
-          <a className="tlink aside-site" href="https://dscsco.com" dir="ltr">
-            <GlobeIcon size={18} />
-            <span className="mono">SANA Company</span>
-          </a>
         </aside>
 
         <div className="form-card" data-reveal>
