@@ -1,7 +1,7 @@
 
 import { NextResponse, type NextRequest } from "next/server";
 
-const LOCALES = ["fa", "en", "ar"] as const;
+const LOCALES = ["fa", "en", "ar", "tr"] as const;
 type Locale = (typeof LOCALES)[number];
 
 const DEFAULT_LOCALE: Locale = "fa";
@@ -69,5 +69,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-    matcher: ["/", "/fa/:path*", "/en/:path*", "/ar/:path*"],
+    matcher: ["/", "/fa/:path*", "/en/:path*", "/ar/:path*", "/tr/:path*"],
 };

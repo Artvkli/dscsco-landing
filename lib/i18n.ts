@@ -1,11 +1,12 @@
 import fa from "./dictionaries/fa";
 import en from "./dictionaries/en";
 import ar from "./dictionaries/ar";
+import tr from "./dictionaries/tr";
 import type { Dictionary } from "./dictionaries/fa";
 
 export type { Dictionary };
 
-export const locales = ["fa", "en", "ar"] as const;
+export const locales = ["fa", "en", "ar", "tr"] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = "fa";
 
@@ -16,16 +17,17 @@ export function isLocale(value: string): value is Locale {
 }
 
 export function dirOf(locale: Locale): "rtl" | "ltr" {
-  return locale === "en" ? "ltr" : "rtl";
+  return locale === "en" || locale === "tr" ? "ltr" : "rtl";
 }
 
 export const localeMeta: Record<Locale, { short: string; name: string; og: string }> = {
   fa: { short: "FA", name: "فارسی", og: "fa_IR" },
   en: { short: "EN", name: "English", og: "en_US" },
   ar: { short: "AR", name: "العربية", og: "ar_AE" },
+  tr: { short: "TR", name: "Türkçe", og: "tr_TR" },
 };
 
-const dictionaries: Record<Locale, Dictionary> = { fa, en, ar };
+const dictionaries: Record<Locale, Dictionary> = { fa, en, ar, tr };
 
 export function getDictionary(locale: Locale): Dictionary {
   return dictionaries[locale];

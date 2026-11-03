@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   // Serve the landing page under /landing
-  basePath: "/landing",
+  // basePath: "/",
 
   reactStrictMode: true,
   poweredByHeader: false,
