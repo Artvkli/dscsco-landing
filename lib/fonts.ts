@@ -1,33 +1,43 @@
-import { IBM_Plex_Mono, IBM_Plex_Sans_Arabic, Manrope, Vazirmatn } from "next/font/google";
 
-// Self-hosted at build time by next/font — no runtime requests to Google.
-const vazirmatn = Vazirmatn({
-  subsets: ["arabic", "latin"],
+import localFont from "next/font/local";
+
+const vazirmatn = localFont({
+  src: "../public/fonts/Vazirmatn.ttf",
   variable: "--font-vazirmatn",
   display: "swap",
+  weight: "100 900",
+  preload: true,
 });
 
-const plexArabic = IBM_Plex_Sans_Arabic({
-  subsets: ["arabic", "latin"],
-  weight: ["400", "500", "600", "700"],
+const plexArabic = localFont({
+  src: "../public/fonts/IBMPlexSansArabic-Regular.ttf",
   variable: "--font-plex-arabic",
   display: "swap",
+  weight: "400",
   preload: false,
 });
 
-const manrope = Manrope({
-  subsets: ["latin"],
+const manrope = localFont({
+  src: "../public/fonts/Manrope.ttf",
   variable: "--font-manrope",
   display: "swap",
+  weight: "200 800",
   preload: false,
 });
 
-const plexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
+const plexMono = localFont({
+  src: "../public/fonts/IBMPlexMono-Regular.ttf",
   variable: "--font-mono",
   display: "swap",
+  weight: "400",
   preload: false,
 });
 
-export const fontVariables = [vazirmatn, plexArabic, manrope, plexMono].map((f) => f.variable).join(" ");
+export const fontVariables = [
+  vazirmatn,
+  plexArabic,
+  manrope,
+  plexMono,
+]
+  .map((font) => font.variable)
+  .join(" ");
