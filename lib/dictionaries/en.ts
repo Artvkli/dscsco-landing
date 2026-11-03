@@ -3,10 +3,10 @@ import type { Dictionary } from "./fa";
 
 const en: Dictionary = {
   "meta": {
-    "title": "Secure, Integrated Communication for Domestic & International Branches | DSCSCO",
+    "title": "Secure, Integrated Communication for Domestic & International Branches | SANA Company",
     "description": "Connect your headquarters, domestic branches and international branches on a secure platform — with centralized management, controlled access and expert support."
   },
-  "brand": "Sana Secure Communications Development Co.",
+  "brand": "Development Secure Communications.",
   "skip": "Skip to main content",
   "navLabel": "Main navigation",
   "langLabel": "Choose language",
@@ -19,7 +19,7 @@ const en: Dictionary = {
     "benefits": "Benefits",
     "intl": "International companies",
     "process": "How it works",
-    "why": "Why DSCSCO",
+    "why": "Why SANA Company",
     "contact": "Contact"
   },
   "hero": {
@@ -165,7 +165,7 @@ const en: Dictionary = {
     ]
   },
   "why": {
-    "eyebrow": "Why DSCSCO",
+    "eyebrow": "Why SANA Company",
     "title": "We build the network around how your organization works",
     "lead": "Not the other way around. Every solution starts with understanding your structure, priorities and growth path.",
     "points": [
@@ -191,7 +191,7 @@ const en: Dictionary = {
       }
     ],
     "ph": "Promotional visual placeholder",
-    "phS": "DSCSCO network operations or technical team"
+    "phS": "SANA Company network operations or technical team"
   },
   "fin": {
     "title": "Connect all your branches through one secure, unified infrastructure.",
@@ -246,7 +246,7 @@ const en: Dictionary = {
       "long": "This entry is too long."
     },
     "okT": "Request received",
-    "okD": "Thank you. A DSCSCO specialist will call you to arrange your consultation.",
+    "okD": "Thank you. A SANA Company specialist will call you to arrange your consultation.",
     "again": "Send another request"
   },
   "foot": {
@@ -254,7 +254,7 @@ const en: Dictionary = {
     "navT": "Quick links",
     "svcT": "Services",
     "webT": "Website",
-    "webD": "Visit the official website to learn more about DSCSCO.",
+    "webD": "Visit the official website to learn more about SANA Company.",
     "svc": [
       "Secure VPN & SD‑WAN",
       "Unified VoIP",
@@ -263,7 +263,7 @@ const en: Dictionary = {
       "Centralized network management",
       "Cybersecurity & technical support"
     ],
-    "rights": "Sana Secure Communications Development Co. All rights reserved.",
+    "rights": "Development Secure Communications. All rights reserved.",
     "top": "Back to top"
   }
 };
