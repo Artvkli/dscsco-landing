@@ -8,17 +8,6 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
 
-  // Persian is the default language
-  async redirects() {
-    return [
-      {
-        source: "/",
-        destination: "/fa",
-        permanent: false,
-      },
-    ];
-  },
-
   async headers() {
     return [
       {

@@ -20,6 +20,7 @@ export default function LanguageSwitcher({ t, locale }: WithLocale) {
           <Link
             key={l}
             href={`/${l}`}
+            prefetch={false}
             className="langbtn"
             hrefLang={l}
             lang={l}
