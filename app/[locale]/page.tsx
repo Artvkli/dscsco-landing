@@ -12,7 +12,11 @@ import Contact from "@/components/Contact";
 import SiteFooter from "@/components/SiteFooter";
 import RevealObserver from "@/components/RevealObserver";
 
-export default async function LandingPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function LandingPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const t = getDictionary(locale);
@@ -22,7 +26,11 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "DSCSCO",
-    alternateName: [getDictionary("fa").brand, getDictionary("en").brand, getDictionary("ar").brand],
+    alternateName: [
+      getDictionary("farsi").brand,
+      getDictionary("english").brand,
+      getDictionary("arabic").brand,
+    ],
     url: SITE_URL,
   };
 
@@ -44,7 +52,10 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
       </main>
       <SiteFooter t={t} locale={locale} />
       <RevealObserver />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </>
   );
 }

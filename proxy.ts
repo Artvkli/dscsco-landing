@@ -1,11 +1,17 @@
-
 import { NextResponse, type NextRequest } from "next/server";
 
-const LOCALES = ["fa", "en", "ar", "tr"] as const;
+const LOCALES = ["farsi", "english", "arabic", "turkish"] as const;
 type Locale = (typeof LOCALES)[number];
 
-const DEFAULT_LOCALE: Locale = "fa";
+const DEFAULT_LOCALE: Locale = "farsi";
 const LOCALE_COOKIE = "NEXT_LOCALE";
+
+const LANGUAGE_MAP: Record<string, Locale> = {
+    fa: "farsi",
+    en: "english",
+    ar: "arabic",
+    tr: "turkish",
+};
 
 function isLocale(value: string): value is Locale {
     return LOCALES.includes(value as Locale);
@@ -18,6 +24,7 @@ function getBrowserLocale(header: string | null): Locale {
         .split(",")
         .map((item) => {
             const [language, quality] = item.trim().split(";q=");
+
             return {
                 language: language.split("-")[0].toLowerCase(),
                 quality: quality ? Number(quality) : 1,
@@ -26,8 +33,10 @@ function getBrowserLocale(header: string | null): Locale {
         .sort((a, b) => b.quality - a.quality);
 
     for (const item of languages) {
-        if (isLocale(item.language)) {
-            return item.language;
+        const locale = LANGUAGE_MAP[item.language];
+
+        if (locale) {
+            return locale;
         }
     }
 
@@ -69,5 +78,11 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-    matcher: ["/", "/fa/:path*", "/en/:path*", "/ar/:path*", "/tr/:path*"],
+    matcher: [
+        "/",
+        "/farsi/:path*",
+        "/english/:path*",
+        "/arabic/:path*",
+        "/turkish/:path*",
+    ],
 };

@@ -6,10 +6,10 @@ import type { WithLocale } from "./types";
 /** Language switcher. Each language has its own URL for SEO and shareable links. */
 export default function LanguageSwitcher({ t, locale }: WithLocale) {
   const flags = {
-    fa: IR,
-    en: GB,
-    ar: SA,
-    tr: TR,
+    farsi: IR,
+    english: GB,
+    arabic: SA,
+    turkish: TR,
   };
 
   return (
