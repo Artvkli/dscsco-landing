@@ -11,7 +11,7 @@ const en: Dictionary = {
   "navLabel": "Main navigation",
   "langLabel": "Choose language",
   "cta": "Request a consultation",
-  "ctaShort": "Consultation",
+  "ctaShort": "Council",
   "menuOpen": "Open menu",
   "menuClose": "Close menu",
   "nav": {

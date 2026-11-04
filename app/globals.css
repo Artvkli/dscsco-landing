@@ -2434,13 +2434,4 @@ select.field {
   .g-contact .next {
     display: none;
   }
-
-  .g-contact .aside .lead {
-    font-size: 0;
-  }
-
-  .g-contact .aside .lead::after {
-    content: "فقط نام، شرکت و شماره تماس کافی است.";
-    font-size: 17px;
-  }
 }

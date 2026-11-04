@@ -12,7 +12,7 @@ const tr: Dictionary = {
     navLabel: "Ana navigasyon",
     langLabel: "Dil seçin",
     cta: "Danışmanlık talep edin",
-    ctaShort: "Danışmanlık",
+    ctaShort: "Danış",
     menuOpen: "Menüyü aç",
     menuClose: "Menüyü kapat",
     nav: {
