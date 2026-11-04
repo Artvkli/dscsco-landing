@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${SITE_URL}/${locale}`,
     lastModified: new Date(),
     changeFrequency: "monthly",
-    priority: locale === "fa" ? 1 : 0.9,
+    priority: locale === "farsi" ? 1 : 0.9,
     alternates: { languages },
   }));
 }
